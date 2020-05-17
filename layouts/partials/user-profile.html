@@ -7,17 +7,17 @@
             {{ with $.Site.Params.avatar }}
             <a itemprop="image" class="u-photo d-block position-relative" aria-hidden="true"
                 href="{{ $.Site.Params.avatar  }}">
-                <img alt="" width="260" height="260"
-                    class="avatar width-full height-full rounded-2" src="{{ $.Site.Params.avatar  }}" />
+                <img alt="" width="260" height="260" class="avatar width-full height-full rounded-2"
+                    src="{{ $.Site.Params.avatar  }}" />
             </a>
             {{ else }}
             <a itemprop="image" class="u-photo d-block position-relative" aria-hidden="true"
                 href="{{ "images/avatar.png" | absURL }}">
 
-                <img alt="" width="260" height="260"
-                    class="avatar width-full height-full rounded-2" src="{{ "images/avatar.png" | absURL }}" />
+                <img alt="" width="260" height="260" class="avatar width-full height-full rounded-2"
+                    src="{{ "images/avatar.png" | absURL }}" />
             </a>
-           {{ end }}
+            {{ end }}
         </div>
         <div class="float-left col-9 col-md-12 pl-2 pl-md-0">
 
@@ -47,7 +47,7 @@
                             <a class="u-email " href="mailto:{{ .Site.Params.Email }}">{{ .Site.Params.Email }}</a>
                         </li>
                         {{ end }}
-
+                        <!--
                         <li itemprop="url" data-test-selector="profile-website-url"
                             class="vcard-detail pt-1 css-truncate css-truncate-target"><svg class="octicon octicon-link"
                                 viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
@@ -61,6 +61,7 @@
                             <a rel="nofollow me" href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a>
                             {{ end }}
                         </li>
+                        -->
                     </ul>
                 </div>
             </div>
@@ -80,14 +81,12 @@
                 </a>
                 {{ end }}
                 {{ if .Site.Params.misskey}}
-                <a class="avatar-group-item" data-hovercard-type="organization"
-                    href="{{ .Site.Params.misskey }}">
+                <a class="avatar-group-item" data-hovercard-type="organization" href="{{ .Site.Params.misskey }}">
                     <img src="{{ "images/misskey.png" | absURL }}" class="avatar" width="35" height="35">
                 </a>
                 {{ end }}
                 {{ if .Site.Params.mastodon}}
-                <a class="avatar-group-item" data-hovercard-type="organization"
-                    href="{{ .Site.Params.mastodon }}">
+                <a class="avatar-group-item" data-hovercard-type="organization" href="{{ .Site.Params.mastodon }}">
                     <img src="{{ "images/mastodon.png" | absURL }}" class="avatar" width="35" height="35">
                 </a>
                 {{ end }}
@@ -103,10 +102,6 @@
                     <img src="{{ "images/twitter.png" | absURL }}" class="avatar" width="35" height="35">
                 </a>
                 {{ end }}
-                <a class="avatar-group-item" data-hovercard-type="organization"
-                                             href="{{ "posts/index.xml" | absURL }}">
-                    <img src="{{ "images/rss.png" | absURL }}" class="avatar" width="38" height="38">
-                </a>
             </div>
 
             <div data-test-selector="profile-sponsorships">
